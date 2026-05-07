@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>PROVEO - Выбирайте по результату, а не по словам</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:300,regular,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Golos+Text:regular,500,600,700"
+      rel="stylesheet"
+    />
+    <link href="assets/css/reset.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/search.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-left">
+            <img class="header-logo" alt="PROVEO" src="./assets/img/logo.png" />
+            <div class="header-divider"></div>
+            <p class="header-slogan">
+              Выбирайте по результату,<br />а не по словам
+            </p>
+          </div>
+          <nav class="header-nav" aria-label="Основная навигация">
+            <ul>
+              <li><button type="button">Работы</button></li>
+              <li><button type="button">Компании</button></li>
+              <li><button type="button">Категории</button></li>
+              <li><button type="button">Города</button></li>
+            </ul>
+          </nav>
+          <div class="header-right">
+            <button class="header-fav-btn" type="button" aria-label="Избранное">
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9998 23.4542C12.664 23.4542 12.339 23.4108 12.0682 23.3133C7.92984 21.8942 1.354 16.8567 1.354 9.41417C1.354 5.6225 4.41984 2.54584 8.18984 2.54584C10.0207 2.54584 11.7323 3.26084 12.9998 4.53917C14.2673 3.26084 15.979 2.54584 17.8098 2.54584C21.5798 2.54584 24.6457 5.63334 24.6457 9.41417C24.6457 16.8675 18.0698 21.8942 13.9315 23.3133C13.6607 23.4108 13.3357 23.4542 12.9998 23.4542ZM8.18984 4.17084C5.319 4.17084 2.979 6.52167 2.979 9.41417C2.979 16.8133 10.0965 20.93 12.599 21.7858C12.794 21.8508 13.2165 21.8508 13.4115 21.7858C15.9032 20.93 23.0315 16.8242 23.0315 9.41417C23.0315 6.52167 20.6915 4.17084 17.8207 4.17084C16.174 4.17084 14.6465 4.94 13.6607 6.2725C13.3573 6.68417 12.664 6.68417 12.3607 6.2725C11.3532 4.92917 9.8365 4.17084 8.18984 4.17084Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+            <button class="header-login-btn" type="button">Войти</button>
+            <button class="header-menu">
+              <span></span>
+            </button>
+            <ul class="header-menu-nav">
+              <li>Работы</li>
+              <li>Компании</li>
+              <li>Категории</li>
+              <li>Города</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <section class="featured-header-section">
+        <div class="featured-header-bg">
+          <div class="featured-header-inner container">
+            <div class="search-bar-wrapper">
+              <div class="verification-tabs">
+                <button
+                  class="verification-tab verification-tab-all"
+                  type="button"
+                >
+                  ВСЕ
+                </button>
+                <button class="verification-tab active" type="button">
+                  <svg
+                    width="19"
+                    height="19"
+                    viewBox="0 0 19 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.46327 17.3495C5.10987 17.3448 1.58193 13.8168 1.57715 9.46341V9.30569C1.66384 4.97189 5.23204 1.52047 9.56632 1.57798C13.9006 1.63549 17.376 5.18037 17.3477 9.51494C17.3193 13.8495 13.7979 17.3487 9.46327 17.3495ZM5.84354 9.14008L4.7316 10.252L7.88605 13.4065L14.195 7.09757L13.083 5.97774L7.88605 11.1747L5.84354 9.14008Z"
+                      fill=""
+                    />
+                  </svg>
+
+                  <span>ПОДТВЕРЖДЕННЫЕ</span>
+                </button>
+              </div>
+              <div class="search-bar">
+                <img
+                  class="search-icon"
+                  src="./assets/icons/search.svg"
+                  alt=""
+                />
+                <input
+                  class="search-bar-input"
+                  type="text"
+                  placeholder="Например: строительство бассейна, ремонт квартиры"
+                />
+                <button class="clear-btn" type="button" hidden>
+                  <img src="./assets/icons/close.svg" alt="очистить" />
+                </button>
+                <button class="search-bar-btn" type="button">Подобрать</button>
+              </div>
+              <div class="search-sorting">
+                <button type="button">
+                  <span>По релевантности</span>
+                  <svg
+                    width="13"
+                    height="7"
+                    viewBox="0 0 13 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                    />
+                  </svg>
+                </button>
+                <ul class="search-sorting-list">
+                  <li>По квадратуре</li>
+                  <li>По релевантности</li>
+                  <li>По количеству работ</li>
+                </ul>
+              </div>
+              <div class="search-bar search-bar--mobile">
+                <img
+                  class="search-icon"
+                  src="./assets/icons/search.svg"
+                  alt=""
+                />
+                <input
+                  class="search-bar-input"
+                  type="text"
+                  placeholder="Например: ремонт квартиры"
+                />
+                <button class="clear-btn" type="button" hidden>
+                  <img src="./assets/icons/close.svg" alt="очистить" />
+                </button>
+              </div>
+              <button class="btn search-btn" type="button">Подобрать</button>
+            </div>
+
+            <button class="filter-btn" type="button">
+              <img src="./assets/icons/category.svg" alt="" />
+              Фильтры
+            </button>
+
+            <div class="filter-groups">
+              <div class="filter-group">
+                <h3 class="filter-group-label">Тип работ:</h3>
+                <div class="filter-group-options filter-job">
+                  <button class="filter-chip active" type="button">Все</button>
+                  <button class="filter-chip" type="button">
+                    IT-консалтинг
+                  </button>
+                  <button class="filter-chip" type="button">
+                    Строительство
+                  </button>
+                  <button class="filter-chip" type="button">
+                    Бухгалтерские услуги
+                  </button>
+                  <button class="filter-chip" type="button">+ Еще</button>
+                </div>
+              </div>
+              <div class="filter-group">
+                <h3 class="filter-group-label">Город:</h3>
+                <div class="filter-group-options filter-city">
+                  <button class="filter-chip" type="button">СПб</button>
+                  <button class="filter-chip active" type="button">
+                    Москва
+                  </button>
+                  <button class="filter-chip" type="button">Казань</button>
+                  <button class="filter-chip" type="button">+ Еще</button>
+                </div>
+              </div>
+              <div class="filter-group">
+                <h3 class="filter-group-label">Тип исполнителя:</h3>
+                <div class="filter-group-options filter-executor">
+                  <button class="filter-chip active" type="button">
+                    Мастер
+                  </button>
+                  <button class="filter-chip" type="button">Профи</button>
+                  <button class="filter-chip" type="button">Компания</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-overlay">
+              <div class="modal-content">
+                <h3 class="modal-content__title">Фильтр</h3>
+                <div class="filter-groups">
+                  <div class="filter-group">
+                    <h3 class="filter-group-label">Тип работ:</h3>
+                    <div class="filter-group-options filter-job">
+                      <button class="filter-chip active" type="button">
+                        Все
+                      </button>
+                      <button class="filter-chip" type="button">
+                        IT-консалтинг
+                      </button>
+                      <button class="filter-chip" type="button">
+                        Строительство
+                      </button>
+                      <button class="filter-chip" type="button">
+                        Бухгалтерские услуги
+                      </button>
+                      <button class="filter-chip" type="button">+ Еще</button>
+                    </div>
+                  </div>
+                  <div class="filter-group">
+                    <h3 class="filter-group-label">Город:</h3>
+                    <div class="filter-group-options filter-city">
+                      <button class="filter-chip" type="button">СПб</button>
+                      <button class="filter-chip active" type="button">
+                        Москва
+                      </button>
+                      <button class="filter-chip" type="button">Казань</button>
+                      <button class="filter-chip" type="button">+ Еще</button>
+                    </div>
+                  </div>
+                  <div class="filter-group">
+                    <h3 class="filter-group-label">Тип исполнителя:</h3>
+                    <div class="filter-group-options filter-executor">
+                      <button class="filter-chip active" type="button">
+                        Мастер
+                      </button>
+                      <button class="filter-chip" type="button">Профи</button>
+                      <button class="filter-chip" type="button">
+                        Компания
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button class="modal-close" type="button">
+                  <img src="./assets/icons/close.svg" alt="закрыть" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD LIST SECTION -->
+      <div class="container">
+        <section class="cards-list">
+          <article class="card">
+            <div class="card-img-container">
+              <div class="card-slider">
+                <img src="./assets/img/cards/1.jpg" />
+                <img src="./assets/img/cards/2.jpg" />
+                <img src="./assets/img/cards/3.jpg" />
+              </div>
+              <div class="card-badge-verified">
+                <img src="./assets/icons/check.svg" alt="" />
+                <span>Подтверждено заказчиком</span>
+              </div>
+              <div class="card-badge-photos">
+                <span>+ 5 фото</span>
+              </div>
+              <button type="button" class="card-slide card-slide--back">
+                <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+              </button>
+              <button type="button" class="card-slide card-slide--forward">
+                <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3 class="card-title">
+                Готовый бассейн 8×4 с подогревом <br />и подсветкой • 45 дней •
+                3,2 млн ₽
+              </h3>
+
+              <div class="card-divider"></div>
+              <div class="card-stats">
+                <div class="stat-item">
+                  <div class="stat-value">24</div>
+                  <span class="stat-label">работ</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <div class="stat-item">
+                  <div class="stat-value">9</div>
+                  <span class="stat-label">подтверждено</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <button class="card-owner" type="button">
+                  <span class="card-owner-name">Владислав Скоробогатый</span>
+                  <svg
+                    width="13"
+                    height="7"
+                    viewBox="0 0 13 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="card-owner-details">
+                <img src="./assets/img/avatar.png" alt="аватар" />
+                <div>
+                  <h5>
+                    Юрий Мишут <img src="./assets/img/profi.png" alt="профи" />
+                  </h5>
+                  <a href="#">Перейти в профиль</a>
+                  <p>
+                    Занимаюсь строительством и ремонтом под ключ. Работаю с
+                    проверенными материалами...
+                  </p>
+                </div>
+              </div>
+              <div class="card-tags">
+                <span class="card-tag primary">Строительство</span>
+                <span class="card-tag secondary">Санкт-Петербург</span>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-container">
+              <div class="card-slider">
+                <img src="./assets/img/cards/2.jpg" />
+                <img src="./assets/img/cards/1.jpg" />
+                <img src="./assets/img/cards/3.jpg" />
+              </div>
+              <div class="card-badge-verified">
+                <img src="./assets/icons/check.svg" alt="" />
+                <span>Подтверждено заказчиком</span>
+              </div>
+              <div class="card-badge-photos">
+                <span>+ 5 фото</span>
+              </div>
+              <button type="button" class="card-slide card-slide--back">
+                <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+              </button>
+              <button type="button" class="card-slide card-slide--forward">
+                <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3 class="card-title">
+                Ремонт квартиры 45 м2 в стиле <br />
+                арт-деко • 45 дней • 3,2 млн ₽
+              </h3>
+
+              <div class="card-divider"></div>
+              <div class="card-stats">
+                <div class="stat-item">
+                  <div class="stat-value">24</div>
+                  <span class="stat-label">работ</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <div class="stat-item">
+                  <div class="stat-value">9</div>
+                  <span class="stat-label">подтверждено</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <button class="card-owner" type="button">
+                  <span class="card-owner-name">Юрий Мишут</span>
+                  <svg
+                    width="13"
+                    height="7"
+                    viewBox="0 0 13 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="card-owner-details">
+                <img src="./assets/img/avatar.png" alt="аватар" />
+                <div>
+                  <h5>
+                    Юрий Мишут <img src="./assets/img/profi.png" alt="профи" />
+                  </h5>
+                  <a href="#">Перейти в профиль</a>
+                  <p>
+                    Занимаюсь строительством и ремонтом под ключ. Работаю с
+                    проверенными материалами...
+                  </p>
+                </div>
+              </div>
+              <div class="card-tags">
+                <span class="card-tag primary">Строительство</span>
+                <span class="card-tag secondary">Санкт-Петербург</span>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-container">
+              <div class="card-slider">
+                <img src="./assets/img/cards/3.jpg" />
+                <img src="./assets/img/cards/2.jpg" />
+                <img src="./assets/img/cards/1.jpg" />
+              </div>
+              <div class="card-badge-verified">
+                <img src="./assets/icons/check.svg" alt="" />
+                <span>Подтверждено заказчиком</span>
+              </div>
+              <div class="card-badge-photos">
+                <span>+ 5 фото</span>
+              </div>
+              <button type="button" class="card-slide card-slide--back">
+                <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+              </button>
+              <button type="button" class="card-slide card-slide--forward">
+                <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3 class="card-title">
+                Ванная с плиткой и душевой зоной <br />
+                12 м² • 45 дней • 3,2 млн ₽
+              </h3>
+
+              <div class="card-divider"></div>
+              <div class="card-stats">
+                <div class="stat-item">
+                  <div class="stat-value">24</div>
+                  <span class="stat-label">работ</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <div class="stat-item">
+                  <div class="stat-value">9</div>
+                  <span class="stat-label">подтверждено</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <button class="card-owner" type="button">
+                  <span class="card-owner-name">Юрий Мишут</span>
+                  <svg
+                    width="13"
+                    height="7"
+                    viewBox="0 0 13 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="card-owner-details">
+                <img src="./assets/img/avatar.png" alt="аватар" />
+                <div>
+                  <h5>
+                    Юрий Мишут <img src="./assets/img/profi.png" alt="профи" />
+                  </h5>
+                  <a href="#">Перейти в профиль</a>
+                  <p>
+                    Занимаюсь строительством и ремонтом под ключ. Работаю с
+                    проверенными материалами...
+                  </p>
+                </div>
+              </div>
+              <div class="card-tags">
+                <span class="card-tag primary">Строительство</span>
+                <span class="card-tag secondary">Санкт-Петербург</span>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-container">
+              <div class="card-slider">
+                <img src="./assets/img/cards/4.jpg" />
+                <img src="./assets/img/cards/2.jpg" />
+                <img src="./assets/img/cards/3.jpg" />
+              </div>
+              <div class="card-badge-verified">
+                <img src="./assets/icons/check.svg" alt="" />
+                <span>Подтверждено заказчиком</span>
+              </div>
+              <div class="card-badge-photos">
+                <span>+ 5 фото</span>
+              </div>
+              <button type="button" class="card-slide card-slide--back">
+                <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+              </button>
+              <button type="button" class="card-slide card-slide--forward">
+                <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3 class="card-title">
+                Натяжной потолок 45 м² <br />с подсветкой • 45 дней • 3,2 млн ₽
+              </h3>
+
+              <div class="card-divider"></div>
+              <div class="card-stats">
+                <div class="stat-item">
+                  <div class="stat-value">24</div>
+                  <span class="stat-label">работ</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <div class="stat-item">
+                  <div class="stat-value">9</div>
+                  <span class="stat-label">подтверждено</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <button class="card-owner" type="button">
+                  <span class="card-owner-name">Юрий Мишут</span>
+                  <svg
+                    width="13"
+                    height="7"
+                    viewBox="0 0 13 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="card-owner-details">
+                <img src="./assets/img/avatar.png" alt="аватар" />
+                <div>
+                  <h5>
+                    Юрий Мишут <img src="./assets/img/profi.png" alt="профи" />
+                  </h5>
+                  <a href="#">Перейти в профиль</a>
+                  <p>
+                    Занимаюсь строительством и ремонтом под ключ. Работаю с
+                    проверенными материалами...
+                  </p>
+                </div>
+              </div>
+              <div class="card-tags">
+                <span class="card-tag primary">Строительство</span>
+                <span class="card-tag secondary">Санкт-Петербург</span>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-container">
+              <div class="card-slider">
+                <img src="./assets/img/cards/5.jpg" />
+                <img src="./assets/img/cards/2.jpg" />
+                <img src="./assets/img/cards/3.jpg" />
+              </div>
+              <div class="card-badge-verified">
+                <img src="./assets/icons/check.svg" alt="" />
+                <span>Подтверждено заказчиком</span>
+              </div>
+              <div class="card-badge-photos">
+                <span>+ 5 фото</span>
+              </div>
+              <button type="button" class="card-slide card-slide--back">
+                <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+              </button>
+              <button type="button" class="card-slide card-slide--forward">
+                <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3 class="card-title">
+                Готовый фасад дома с утеплением <br />120 м² • 45 дней • 3,2 млн
+                ₽
+              </h3>
+
+              <div class="card-divider"></div>
+              <div class="card-stats">
+                <div class="stat-item">
+                  <div class="stat-value">24</div>
+                  <span class="stat-label">работ</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <div class="stat-item">
+                  <div class="stat-value">9</div>
+                  <span class="stat-label">подтверждено</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <button class="card-owner" type="button">
+                  <span class="card-owner-name">Юрий Мишут</span>
+                  <svg
+                    width="13"
+                    height="7"
+                    viewBox="0 0 13 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="card-owner-details">
+                <img src="./assets/img/avatar.png" alt="аватар" />
+                <div>
+                  <h5>
+                    Юрий Мишут <img src="./assets/img/profi.png" alt="профи" />
+                  </h5>
+                  <a href="#">Перейти в профиль</a>
+                  <p>
+                    Занимаюсь строительством и ремонтом под ключ. Работаю с
+                    проверенными материалами...
+                  </p>
+                </div>
+              </div>
+              <div class="card-tags">
+                <span class="card-tag primary">Строительство</span>
+                <span class="card-tag secondary">Санкт-Петербург</span>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-container">
+              <div class="card-slider">
+                <img src="./assets/img/cards/6.jpg" />
+                <img src="./assets/img/cards/2.jpg" />
+                <img src="./assets/img/cards/3.jpg" />
+              </div>
+              <div class="card-badge-verified">
+                <img src="./assets/icons/check.svg" alt="" />
+                <span>Подтверждено заказчиком</span>
+              </div>
+              <div class="card-badge-photos">
+                <span>+ 5 фото</span>
+              </div>
+              <button type="button" class="card-slide card-slide--back">
+                <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+              </button>
+              <button type="button" class="card-slide card-slide--forward">
+                <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3 class="card-title">
+                Кухня 14 м² с островом и встроенной <br />техникой • 45 дней •
+                3,2 млн ₽
+              </h3>
+
+              <div class="card-divider"></div>
+              <div class="card-stats">
+                <div class="stat-item">
+                  <div class="stat-value">24</div>
+                  <span class="stat-label">работ</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <div class="stat-item">
+                  <div class="stat-value">9</div>
+                  <span class="stat-label">подтверждено</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <button class="card-owner" type="button">
+                  <span class="card-owner-name">Юрий Мишут</span>
+                  <svg
+                    width="13"
+                    height="7"
+                    viewBox="0 0 13 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="card-owner-details">
+                <img src="./assets/img/avatar.png" alt="аватар" />
+                <div>
+                  <h5>
+                    Юрий Мишут <img src="./assets/img/profi.png" alt="профи" />
+                  </h5>
+                  <a href="#">Перейти в профиль</a>
+                  <p>
+                    Занимаюсь строительством и ремонтом под ключ. Работаю с
+                    проверенными материалами...
+                  </p>
+                </div>
+              </div>
+              <div class="card-tags">
+                <span class="card-tag primary">Строительство</span>
+                <span class="card-tag secondary">Санкт-Петербург</span>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-container">
+              <div class="card-slider">
+                <img src="./assets/img/cards/7.jpg" />
+                <img src="./assets/img/cards/2.jpg" />
+                <img src="./assets/img/cards/3.jpg" />
+              </div>
+              <div class="card-badge-verified">
+                <img src="./assets/icons/check.svg" alt="" />
+                <span>Подтверждено заказчиком</span>
+              </div>
+              <div class="card-badge-photos">
+                <span>+ 5 фото</span>
+              </div>
+              <button type="button" class="card-slide card-slide--back">
+                <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+              </button>
+              <button type="button" class="card-slide card-slide--forward">
+                <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3 class="card-title">
+                Каркасный дом 120 м² под ключ<br />с террасой • 45 дней • 3,2
+                млн ₽
+              </h3>
+
+              <div class="card-divider"></div>
+              <div class="card-stats">
+                <div class="stat-item">
+                  <div class="stat-value">24</div>
+                  <span class="stat-label">работ</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <div class="stat-item">
+                  <div class="stat-value">9</div>
+                  <span class="stat-label">подтверждено</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <button class="card-owner" type="button">
+                  <span class="card-owner-name">Юрий Мишут</span>
+                  <svg
+                    width="13"
+                    height="7"
+                    viewBox="0 0 13 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="card-owner-details">
+                <img src="./assets/img/avatar.png" alt="аватар" />
+                <div>
+                  <h5>
+                    Юрий Мишут <img src="./assets/img/profi.png" alt="профи" />
+                  </h5>
+                  <a href="#">Перейти в профиль</a>
+                  <p>
+                    Занимаюсь строительством и ремонтом под ключ. Работаю с
+                    проверенными материалами...
+                  </p>
+                </div>
+              </div>
+              <div class="card-tags">
+                <span class="card-tag primary">Строительство</span>
+                <span class="card-tag secondary">Санкт-Петербург</span>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-container">
+              <div class="card-slider">
+                <img src="./assets/img/cards/8.jpg" />
+                <img src="./assets/img/cards/2.jpg" />
+                <img src="./assets/img/cards/3.jpg" />
+              </div>
+              <div class="card-badge-verified">
+                <img src="./assets/icons/check.svg" alt="" />
+                <span>Подтверждено заказчиком</span>
+              </div>
+              <div class="card-badge-photos">
+                <span>+ 5 фото</span>
+              </div>
+              <button type="button" class="card-slide card-slide--back">
+                <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+              </button>
+              <button type="button" class="card-slide card-slide--forward">
+                <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3 class="card-title">
+                Новая электрика в квартире 65 м² <br />с щитом • 45 дней • 3,2
+                млн ₽
+              </h3>
+
+              <div class="card-divider"></div>
+              <div class="card-stats">
+                <div class="stat-item">
+                  <div class="stat-value">24</div>
+                  <span class="stat-label">работ</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <div class="stat-item">
+                  <div class="stat-value">9</div>
+                  <span class="stat-label">подтверждено</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <button class="card-owner" type="button">
+                  <span class="card-owner-name">Юрий Мишут</span>
+                  <svg
+                    width="13"
+                    height="7"
+                    viewBox="0 0 13 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="card-owner-details">
+                <img src="./assets/img/avatar.png" alt="аватар" />
+                <div>
+                  <h5>
+                    Юрий Мишут <img src="./assets/img/profi.png" alt="профи" />
+                  </h5>
+                  <a href="#">Перейти в профиль</a>
+                  <p>
+                    Занимаюсь строительством и ремонтом под ключ. Работаю с
+                    проверенными материалами...
+                  </p>
+                </div>
+              </div>
+              <div class="card-tags">
+                <span class="card-tag primary">Строительство</span>
+                <span class="card-tag secondary">Санкт-Петербург</span>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img-container">
+              <div class="card-slider">
+                <img src="./assets/img/cards/9.jpg" />
+                <img src="./assets/img/cards/2.jpg" />
+                <img src="./assets/img/cards/3.jpg" />
+              </div>
+              <div class="card-badge-verified">
+                <img src="./assets/icons/check.svg" alt="" />
+                <span>Подтверждено заказчиком</span>
+              </div>
+              <div class="card-badge-photos">
+                <span>+ 5 фото</span>
+              </div>
+              <button type="button" class="card-slide card-slide--back">
+                <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+              </button>
+              <button type="button" class="card-slide card-slide--forward">
+                <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+              </button>
+            </div>
+
+            <div class="card-content">
+              <h3 class="card-title">
+                Балкон 6 м с утеплением и чистовой <br />отделкой • 45 дней •
+                3,2 млн ₽
+              </h3>
+
+              <div class="card-divider"></div>
+              <div class="card-stats">
+                <div class="stat-item">
+                  <div class="stat-value">24</div>
+                  <span class="stat-label">работ</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <div class="stat-item">
+                  <div class="stat-value">9</div>
+                  <span class="stat-label">подтверждено</span>
+                </div>
+                <span class="stat-dot">·</span>
+                <button class="card-owner" type="button">
+                  <span class="card-owner-name">Юрий Мишут</span>
+                  <svg
+                    width="13"
+                    height="7"
+                    viewBox="0 0 13 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="card-owner-details">
+                <img src="./assets/img/avatar.png" alt="аватар" />
+                <div>
+                  <h5>
+                    Юрий Мишут <img src="./assets/img/profi.png" alt="профи" />
+                  </h5>
+                  <a href="#">Перейти в профиль</a>
+                  <p>
+                    Занимаюсь строительством и ремонтом под ключ. Работаю с
+                    проверенными материалами...
+                  </p>
+                </div>
+              </div>
+              <div class="card-tags">
+                <span class="card-tag primary">Строительство</span>
+                <span class="card-tag secondary">Санкт-Петербург</span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+      <!-- SITE FOOTER -->
+      <footer class="site-footer">
+        <div class="site-footer-card">
+          <div class="site-footer-left">
+            <img
+              class="site-footer-logo"
+              alt="PROVEO"
+              src="./assets/img/white-logo.png"
+            />
+            <div class="site-footer-divider"></div>
+            <p class="site-footer-slogan">
+              Выбирайте по результату,<br />а не по словам
+            </p>
+          </div>
+          <nav class="site-footer-nav" aria-label="Нижняя навигация">
+            <ul>
+              <li>
+                <span class="site-footer-copyright"
+                  >&copy; 2026 PROVEO. Все права защищены</span
+                >
+              </li>
+              <li>
+                <a class="site-footer-link" href="#"
+                  >Политика конфиденциальности</a
+                >
+              </li>
+              <li><a class="site-footer-link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </main>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/search.js"></script>
+  </body>
+</html>
