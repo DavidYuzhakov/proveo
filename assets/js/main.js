@@ -267,36 +267,44 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.card').forEach((card) => {
     const showOwner = card.querySelector('.card-owner')
     const slider = card.querySelector('.card-slider')
-    const slides = slider.querySelectorAll('img')
+    const slides = slider?.querySelectorAll('img')
     const btnNext = card.querySelector('.card-slide--forward')
     const btnPrev = card.querySelector('.card-slide--back')
 
+    card.addEventListener('click', () => console.log('crd'))
+
     if (showOwner) {
-      showOwner.addEventListener('click', () => {
+      showOwner.addEventListener('click', (e) => {
+        e.stopPropagation()
+        e.preventDefault()
         card.classList.toggle('owner-active')
       })
     }
 
     let index = 0
-    const total = slides.length
+    const total = slides?.length
 
     function update() {
       slider.style.transform = `translateX(-${index * 100}%)`
     }
 
-    btnNext.addEventListener('click', () => {
+    btnNext?.addEventListener('click', (e) => {
+      e.stopPropagation()
+      e.preventDefault()
       index = (index + 1) % total
       update()
     })
 
-    btnPrev.addEventListener('click', () => {
+    btnPrev?.addEventListener('click', (e) => {
+      e.stopPropagation()
+      e.preventDefault()
       index = (index - 1 + total) % total
       update()
     })
   })
 
   // Menu
-  document.querySelector('.header-menu').addEventListener('click', (e) => {
+  document.querySelector('.header-menu')?.addEventListener('click', (e) => {
     e.currentTarget.classList.toggle('active')
   })
 
