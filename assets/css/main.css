@@ -581,6 +581,7 @@
 .cards-list {
   display: grid;
   grid-template-columns: 1fr;
+  justify-content: center;
   gap: 30px;
   margin-top: -130px;
 }
@@ -938,7 +939,7 @@
 
 @media (min-width: 576px) {
   .cards-list {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 405px));
   }
 }
 
