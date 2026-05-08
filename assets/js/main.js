@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const searchTabs = document.querySelectorAll('.verification-tab')
-  const executorTabs = document.querySelectorAll(
-    '.filter-executor > .filter-chip',
-  )
-  const cityTabs = document.querySelectorAll('.filter-city > .filter-chip')
-  const jobTabs = document.querySelectorAll('.filter-job > .filter-chip')
+  const searchTabs = document.querySelector('.verification-tabs')
+  const executorTabs = document.querySelector('.filter-executor')
+  const cityTabs = document.querySelector('.filter-city')
+  const jobTabs = document.querySelector('.filter-job')
 
   changeFilterTab(searchTabs)
   changeFilterTab(jobTabs)
@@ -321,13 +319,12 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 })
 
-function changeFilterTab(tabs) {
-  if (tabs.length > 0) {
-    tabs.forEach((tab) => {
-      tab.addEventListener('click', () => {
-        tabs.forEach((item) => item.classList.remove('active'))
-        tab.classList.add('active')
-      })
-    })
-  }
+function changeFilterTab(container) {
+  container.addEventListener('click', (e) => {
+    const tab = e.target.closest('.filter-chip')
+    container
+      .querySelectorAll('.filter-chip')
+      .forEach((item) => item.classList.remove('active'))
+    tab.classList.add('active')
+  })
 }
