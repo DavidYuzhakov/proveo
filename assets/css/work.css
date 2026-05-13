@@ -1,0 +1,840 @@
+.cards-list--work {
+  margin-top: 0;
+}
+
+.similar-works {
+  margin: 70px auto;
+}
+
+.similar-works__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.similar-works__head h2 {
+  font-weight: 600;
+  font-family: 'Golos Text';
+  font-size: 26px;
+}
+
+.similar-works__head a {
+  color: #164c9e;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 16px;
+
+  display: none;
+}
+
+.show-works-btn {
+  display: block;
+  width: 100%;
+}
+
+.breadcrumbs {
+  margin-top: 20px;
+  margin-bottom: 26px;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumbs-item {
+  text-wrap: nowrap;
+  font-size: 12px;
+}
+
+.breadcrumbs-item:not(.breadcrumbs-item-current):hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs-item-current {
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .similar-works {
+    margin: 100px auto;
+  }
+
+  .similar-works__head {
+    margin-bottom: 40px;
+  }
+
+  .similar-works__head h2 {
+    font-size: 30px;
+  }
+
+  .similar-works__head a {
+    display: block;
+  }
+
+  .show-works-btn {
+    display: none;
+  }
+
+  .breadcrumbs {
+    margin-top: 26px;
+    margin-bottom: 40px;
+  }
+
+  .breadcrumbs-item {
+    font-size: 14px;
+  }
+}
+
+/* Work Details & Workd Details Info */
+.work-details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.work-slider-preview {
+  position: relative;
+}
+
+.work-slider-main__image {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-slider-thumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 7.8px;
+}
+
+.work-slider-thumb {
+  width: 59px;
+  height: 59px;
+  cursor: pointer;
+}
+
+.work-slider-thumb:not(.active) {
+  opacity: 0.6;
+}
+
+.work-slider-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 6px;
+}
+
+.work-tags {
+  gap: 12px;
+  margin-top: 0;
+}
+
+.work-tag {
+  padding: 5px 18px;
+  font-size: 16px;
+  line-height: 135%;
+}
+
+.work-details {
+  position: relative;
+}
+
+.work-details-info__title {
+  font-family: 'Golos Text';
+  font-weight: 700;
+  font-size: 28px;
+  margin-top: 13px;
+}
+
+.work-badge-verified {
+  position: static;
+  width: fit-content;
+  margin-top: 20px;
+
+  padding: 7.5px 12px;
+  gap: 5.5px;
+}
+
+.work-badge-verified span {
+  font-size: 16px;
+}
+
+.work-badge-verified img {
+  width: 29px;
+  height: 29px;
+}
+
+.work-statistic {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  border-top: 1px solid rgba(103, 103, 103, 0.2);
+  border-bottom: 1px solid rgba(103, 103, 103, 0.2);
+  width: 100%;
+
+  padding-top: 14px;
+  padding-bottom: 16px;
+
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.statistic-divider {
+  width: 1px;
+  background-color: rgba(103, 103, 103, 0.2);
+
+  height: 46px;
+}
+
+.work-statistic__item {
+  display: flex;
+  gap: 11px;
+}
+
+.work-statistic__item img {
+  width: 23px;
+  height: 23px;
+}
+
+.work-statistic__item h5 {
+  font-size: 19px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.work-statistic__item h5 span {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.work-statistic__item p {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+.work-details-info .work-description,
+.work-details-info .case-verification,
+.work-details-info .contractor-profile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .work-slide-prev {
+    left: 20px;
+  }
+
+  .work-slide-next {
+    right: 20px;
+  }
+
+  .work-slider-thumbs {
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .work-slider-thumb {
+    width: 100px;
+    height: 100px;
+  }
+
+  .work-slider-thumb img {
+    border-radius: 8.38px;
+  }
+
+  .work-details-info__title {
+    font-size: 34px;
+    margin-top: 15px;
+  }
+
+  .work-badge-verified {
+    margin-top: 26px;
+    gap: 8px;
+    padding: 9px 15px;
+  }
+
+  .work-badge-verified span {
+    font-size: 20px;
+  }
+
+  .work-badge-verified img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .work-statistic__item {
+    gap: 16px;
+  }
+
+  .statistic-divider {
+    height: 65px;
+  }
+
+  .work-statistic__item img {
+    width: 33px;
+    height: 33px;
+  }
+
+  .work-statistic__item h5 {
+    font-size: 26px;
+  }
+
+  .work-statistic__item h5 span {
+    font-size: 33px;
+  }
+
+  .work-statistic__item p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .work-details-info {
+    flex-direction: row;
+    gap: 45px;
+  }
+
+  .work-details-info .work-description,
+  .work-details-info .case-verification,
+  .work-details-info .contractor-profile {
+    display: block;
+  }
+
+  .work-statistic {
+    padding: 22px 0;
+    margin: 40px 0;
+    min-width: 435px;
+  }
+
+  .work-slider-main__image {
+    max-width: 734px;
+  }
+
+  .work-details-info__right {
+    width: 500px;
+  }
+}
+
+/* Work Details Desc */
+.work-details-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.work-details-desc__left {
+  margin-top: 0px;
+}
+
+.work-description-title {
+  font-family: 'Golos Text';
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.desc-items {
+  margin-top: 30px;
+}
+.desc-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.desc-item ul {
+  list-style: inside;
+}
+.desc-item ul li {
+  line-height: 24px;
+}
+
+.desc-item-title {
+  font-family: 'Golos Text';
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.desc-item-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 753px;
+}
+
+.desc-sep {
+  height: 1px;
+  background: rgba(103, 103, 103, 0.2);
+  margin: 26px 0;
+}
+
+@media (min-width: 768px) {
+  .desc-item {
+    gap: 24px;
+  }
+  .desc-item-title {
+    font-size: 20px;
+  }
+
+  .desc-sep {
+    margin: 32px 0;
+  }
+
+  .work-description-title {
+    font-size: 30px;
+  }
+
+  .desc-items {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .work-details-desc {
+    display: none;
+  }
+
+  .work-description {
+    margin-top: 70px;
+  }
+}
+
+/* ── CASE VERIFICATION ── */
+.case-verification {
+  margin-top: 40px;
+  background: #f9f9f9;
+  border-radius: 10px;
+
+  padding: 20px;
+}
+
+.case-verification h4 {
+  font-family: 'Golos Text';
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.verification-green {
+  background: #299b1a;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.verification-green img {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+.verification-green-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 14.5px;
+}
+.verification-green-sub {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.25;
+}
+
+.verification-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.verification-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.verification-item img {
+  flex-shrink: 0;
+}
+.verification-item-text {
+  font-size: 14x;
+  font-weight: 500;
+  color: #000;
+}
+
+.v-sep {
+  display: none;
+  width: 1px;
+  height: 36px;
+  background: rgba(103, 103, 103, 0.2);
+  flex-shrink: 0;
+}
+
+@media (min-width: 992px) {
+  .work-details-desc__left {
+    margin-top: 70px;
+  }
+
+  .case-verification {
+    margin-top: 70px;
+    padding: 40px 50px 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .verification-items {
+    flex-direction: row;
+  }
+  .v-sep {
+    display: block;
+  }
+
+  .verification-item-text {
+    font-size: 18px;
+  }
+
+  .verification-green {
+    padding: 19px 30px;
+  }
+  .verification-green-title {
+    font-size: 20px;
+    margin-bottom: 13px;
+  }
+
+  .case-verification h4 {
+    margin-bottom: 26px;
+    font-size: 28px;
+  }
+}
+
+.contractor-profile {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 30px 16px;
+  margin: 0 -16px;
+}
+
+.contractor-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contractor-avatar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.contractor-info {
+  width: 100%;
+}
+
+.contractor-name-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.contractor-name-row img {
+  max-width: 84px;
+}
+
+.contractor-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.profi-badge {
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.contractor-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #164c9e;
+  text-decoration: underline;
+  cursor: pointer;
+  line-height: 39px;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 20px;
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.stat-card-value {
+  font-family: 'Golos Text';
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.stat-card-label {
+  font-family: 'Golos Text';
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .contractor-profile {
+    padding: 30px;
+    margin: 0;
+  }
+
+  .contractor-name {
+    font-size: 22px;
+  }
+
+  .contractor-link {
+    font-size: 16px;
+  }
+
+  .stats-cards {
+    margin-top: 20px;
+  }
+
+  .stat-card {
+    padding: 14px 16px;
+  }
+
+  .stat-card-value {
+    font-size: 28px;
+  }
+}
+
+/* ── CONTACT CARD ── */
+.contact-card {
+  background: #fff;
+  border: 1px solid rgba(103, 103, 103, 0.2);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 18px 20px;
+}
+
+.contact-phone-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding-bottom: 13px;
+}
+
+.contact-phone {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn-call {
+  background: #fff;
+  border: 1px solid #164c9e;
+
+  border-radius: 10px;
+  padding: 0 23px;
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  line-height: 34px;
+
+  color: #164c9e;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.btn-call:hover {
+  background: rgba(22, 76, 158, 0.05);
+}
+
+.contact-sep {
+  height: 1px;
+  background: rgba(103, 103, 103, 0.2);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.contact-row img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.contact-row-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.messenger-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 14px;
+}
+.messenger-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.messenger-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (min-width: 768px) {
+  .contact-card {
+    padding: 20 26px;
+  }
+
+  .contact-phone {
+    font-size: 20px;
+  }
+
+  .btn-call {
+    padding: 0 26px;
+  }
+}
+
+/* ── CTA CARD ── */
+.cta-card {
+  background: rgba(22, 76, 158, 0.06);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 28px 20px;
+}
+
+.cta-title {
+  font-family: 'Golos Text';
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.cta-sub {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.cta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.cta-input {
+  height: 50px;
+  border: 1px solid rgba(103, 103, 103, 0.2);
+  border-radius: 10px;
+  background: #fff;
+
+  padding: 0 24px;
+
+  color: #000;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+.cta-input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+.cta-input:focus {
+  border-color: #67676770;
+}
+
+.btn-cta-submit {
+  height: 50px;
+  background: #1e6ee7;
+  color: #fff;
+
+  border-radius: 10px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btn-cta-submit:hover {
+  opacity: 0.9;
+}
+
+.cta-notices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.cta-notice {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.cta-notice-primary {
+  color: #000;
+}
+.cta-notice-muted {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+  .cta-card {
+    padding: 32px 30px 32px 40px;
+  }
+
+  .cta-title {
+    font-size: 26px;
+  }
+
+  .cta-sub {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  .cta-form {
+    margin-top: 26px;
+  }
+}

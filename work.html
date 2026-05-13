@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>PROVEO - Выбирайте по результату, а не по словам</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:300,regular,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Golos+Text:regular,500,600,700"
+      rel="stylesheet"
+    />
+    <link href="assets/css/reset.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/work.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-left">
+            <img class="header-logo" alt="PROVEO" src="./assets/img/logo.png" />
+            <div class="header-divider"></div>
+            <p class="header-slogan">
+              Выбирайте по результату,<br />а не по словам
+            </p>
+          </div>
+          <nav class="header-nav" aria-label="Основная навигация">
+            <ul>
+              <li><button type="button">Работы</button></li>
+              <li><button type="button">Компании</button></li>
+              <li><button type="button">Категории</button></li>
+              <li><button type="button">Города</button></li>
+            </ul>
+          </nav>
+          <div class="header-right">
+            <button class="header-fav-btn" type="button" aria-label="Избранное">
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9998 23.4542C12.664 23.4542 12.339 23.4108 12.0682 23.3133C7.92984 21.8942 1.354 16.8567 1.354 9.41417C1.354 5.6225 4.41984 2.54584 8.18984 2.54584C10.0207 2.54584 11.7323 3.26084 12.9998 4.53917C14.2673 3.26084 15.979 2.54584 17.8098 2.54584C21.5798 2.54584 24.6457 5.63334 24.6457 9.41417C24.6457 16.8675 18.0698 21.8942 13.9315 23.3133C13.6607 23.4108 13.3357 23.4542 12.9998 23.4542ZM8.18984 4.17084C5.319 4.17084 2.979 6.52167 2.979 9.41417C2.979 16.8133 10.0965 20.93 12.599 21.7858C12.794 21.8508 13.2165 21.8508 13.4115 21.7858C15.9032 20.93 23.0315 16.8242 23.0315 9.41417C23.0315 6.52167 20.6915 4.17084 17.8207 4.17084C16.174 4.17084 14.6465 4.94 13.6607 6.2725C13.3573 6.68417 12.664 6.68417 12.3607 6.2725C11.3532 4.92917 9.8365 4.17084 8.18984 4.17084Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+            <button class="header-login-btn" type="button">Войти</button>
+            <button class="header-menu">
+              <span></span>
+            </button>
+            <ul class="header-menu-nav">
+              <li>Работы</li>
+              <li>Компании</li>
+              <li>Категории</li>
+              <li>Города</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <ol class="breadcrumbs-list">
+            <li class="breadcrumbs-item">
+              <a href="#">Proveo</a>
+            </li>
+            /
+            <li class="breadcrumbs-item">
+              <a href="#">Санкт-Петербург</a>
+            </li>
+            /
+            <li class="breadcrumbs-item">
+              <a href="/catalog/phones">Бассейны</a>
+            </li>
+            /
+            <li
+              class="breadcrumbs-item breadcrumbs-item-current"
+              aria-current="page"
+            >
+              Строительство бассейна 8×4 с подогревом и подсветĸои
+            </li>
+          </ol>
+        </nav>
+
+        <section class="work-details">
+          <div class="work-details__info work-details-info">
+            <div class="work-details-info__left">
+              <div class="work-slider">
+                <div class="work-slider-preview">
+                  <button
+                    type="button"
+                    class="card-slide work-slide-prev card-slide--back"
+                  >
+                    <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+                  </button>
+                  <button
+                    type="button"
+                    class="card-slide work-slide-next card-slide--forward"
+                  >
+                    <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+                  </button>
+
+                  <img
+                    class="work-slider-main__image"
+                    src="./assets/img/work/1.png"
+                    alt=""
+                  />
+                </div>
+
+                <div class="work-slider-thumbs">
+                  <div class="work-slider-thumb active">
+                    <img src="./assets/img/work/1.png" alt="" />
+                  </div>
+
+                  <div class="work-slider-thumb">
+                    <img src="./assets/img/work/2.png" alt="" />
+                  </div>
+
+                  <div class="work-slider-thumb">
+                    <img src="./assets/img/work/3.png" alt="" />
+                  </div>
+
+                  <div class="work-slider-thumb">
+                    <img src="./assets/img/work/4.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="work-description">
+                <h3 class="work-description-title">Описание работы</h3>
+                <div class="desc-items">
+                  <div class="desc-item">
+                    <h3 class="desc-item-title">Задача</h3>
+                    <p class="desc-item-text">
+                      Сделать бассейн для частного дома с возможностью
+                      круглогодичного использования.
+                    </p>
+                  </div>
+                  <div class="desc-sep"></div>
+                  <div class="desc-item">
+                    <h3 class="desc-item-title">Что было сделано</h3>
+                    <div class="desc-item-text">
+                      <ul>
+                        <li>установили оборудование</li>
+                        <li>сделали подсветĸу</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="desc-sep"></div>
+                  <div class="desc-item">
+                    <h3 class="desc-item-title">Результат</h3>
+                    <p class="desc-item-text">
+                      Готовый бассейн с чистой водой и автоматиĸой
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="case-verification">
+                <h4>Как подтверждён этот кейс</h4>
+                <div class="verification-green">
+                  <img src="./assets/icons/check.svg" alt="" />
+                  <div>
+                    <p class="verification-green-title">
+                      Подтверждён результат
+                    </p>
+                    <p class="verification-green-sub">
+                      Работа действительно выполнена и проверена
+                    </p>
+                  </div>
+                </div>
+                <div class="verification-items">
+                  <div class="verification-item">
+                    <img src="./assets/icons/check-simple.svg" alt="" />
+                    <p class="verification-item-text">Связались с заказчиком</p>
+                  </div>
+                  <div class="v-sep"></div>
+                  <div class="verification-item">
+                    <img src="./assets/icons/check-simple.svg" alt="" />
+                    <p class="verification-item-text">Проверено Proveo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="work-details-info__right">
+              <div class="card-tags work-tags">
+                <span class="card-tag work-tag primary">Бассейны</span>
+                <span class="card-tag work-tag secondary">Санкт-Петербург</span>
+              </div>
+              <h2 class="work-details-info__title">
+                Строительство бассейна 8×4 с подогревом и подсветкой
+              </h2>
+              <div class="card-badge-verified work-badge-verified">
+                <img src="./assets/icons/check.svg" alt="" />
+                <span>Подтверждено заказчиком</span>
+              </div>
+              <div class="work-statistic">
+                <div class="work-statistic__item">
+                  <img src="./assets/icons/clock.svg" alt="" />
+                  <div>
+                    <h5><span>45</span> дней</h5>
+                    <p>срок реализации</p>
+                  </div>
+                </div>
+                <div class="statistic-divider"></div>
+                <div class="work-statistic__item">
+                  <img src="./assets/icons/money-forbidden.svg" alt="" />
+                  <div>
+                    <h5><span>3,2</span> млн ₽</h5>
+                    <p>бюджет проекта</p>
+                  </div>
+                </div>
+              </div>
+              <div class="contractor-profile">
+                <div class="contractor-header">
+                  <img
+                    class="contractor-avatar"
+                    src="./assets/img/avatar.png"
+                    alt="Юрий Мишут"
+                  />
+                  <div class="contractor-info">
+                    <div class="contractor-name-row">
+                      <span class="contractor-name">Юрий Мишут</span>
+                      <img src="./assets/img/profi.png" alt="Профи" />
+                    </div>
+                    <button type="button" class="contractor-link">
+                      Перейти в профиль
+                    </button>
+                  </div>
+                </div>
+
+                <div class="stats-cards">
+                  <div class="stat-card">
+                    <div class="stat-card-value">24</div>
+                    <div class="stat-card-label">готовые работы</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-card-value">9</div>
+                    <div class="stat-card-label">подтверждено</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-card-value">12 000</div>
+                    <div class="stat-card-label">просмотров</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-card-value">86</div>
+                    <div class="stat-card-label">заявоĸ на работу</div>
+                  </div>
+                </div>
+
+                <div class="contact-card">
+                  <div class="contact-phone-row">
+                    <span class="contact-phone">+7 (911) 443-43-23</span>
+                    <button type="button" class="btn-call">Позвонить</button>
+                  </div>
+                  <div class="contact-sep"></div>
+                  <div class="contact-row">
+                    <img src="./assets/icons/sms.svg" alt="" />
+                    <span class="contact-row-text">Uiryimishut@gmail.com</span>
+                  </div>
+                  <div class="contact-sep"></div>
+                  <div class="contact-row">
+                    <img src="./assets/icons/global.svg" alt="" />
+                    <span class="contact-row-text">Mishutrabota.com</span>
+                  </div>
+                  <div class="contact-sep"></div>
+                  <div class="messenger-row">
+                    <span class="messenger-label">Написать в мессенджер:</span>
+                    <div class="messenger-list">
+                      <a href="#">
+                        <img src="./assets/icons/max.svg" alt="" />
+                      </a>
+                      <a href="#">
+                        <img src="./assets/icons/telegram.svg" alt="" />
+                      </a>
+                      <a href="#">
+                        <img src="./assets/icons/whatsapp.svg" alt="" />
+                      </a>
+                      <a href="#">
+                        <img src="./assets/icons/inst.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cta-card">
+                  <h3 class="cta-title">Хотите такой же бассейн?</h3>
+                  <p class="cta-sub">Юрий свяжется с вами лично</p>
+                  <form class="cta-form">
+                    <input
+                      type="tel"
+                      class="cta-input"
+                      placeholder="Телефон *"
+                    />
+                    <button type="submit" class="btn-cta-submit">
+                      Получить расчет
+                    </button>
+                  </form>
+                  <div class="cta-notices">
+                    <p class="cta-notice cta-notice-primary">
+                      Мы передадим вашу заявку и номер телефона исполнителю,<br />а
+                      вам — его контакт для связи
+                    </p>
+                    <p class="cta-notice cta-notice-muted">
+                      Нажимая на кнопку, вы даете согласие на обработку
+                      персональных данных
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-details__desc work-details-desc">
+            <div class="work-details-desc__left">
+              <div class="work-description">
+                <h3 class="work-description-title">Описание работы</h3>
+                <div class="desc-items">
+                  <div class="desc-item">
+                    <h3 class="desc-item-title">Задача</h3>
+                    <p class="desc-item-text">
+                      Сделать бассейн для частного дома с возможностью
+                      круглогодичного использования.
+                    </p>
+                  </div>
+                  <div class="desc-sep"></div>
+                  <div class="desc-item">
+                    <h3 class="desc-item-title">Что было сделано</h3>
+                    <div class="desc-item-text">
+                      <ul>
+                        <li>установили оборудование</li>
+                        <li>сделали подсветĸу</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="desc-sep"></div>
+                  <div class="desc-item">
+                    <h3 class="desc-item-title">Результат</h3>
+                    <p class="desc-item-text">
+                      Готовый бассейн с чистой водой и автоматиĸой
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="case-verification">
+                <h4>Как подтверждён этот кейс</h4>
+                <div class="verification-green">
+                  <img src="./assets/icons/check.svg" alt="" />
+                  <div>
+                    <p class="verification-green-title">
+                      Подтверждён результат
+                    </p>
+                    <p class="verification-green-sub">
+                      Работа действительно выполнена и проверена
+                    </p>
+                  </div>
+                </div>
+                <div class="verification-items">
+                  <div class="verification-item">
+                    <img src="./assets/icons/check-simple.svg" alt="" />
+                    <p class="verification-item-text">Связались с заказчиком</p>
+                  </div>
+                  <div class="v-sep"></div>
+                  <div class="verification-item">
+                    <img src="./assets/icons/check-simple.svg" alt="" />
+                    <p class="verification-item-text">Проверено Proveo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="work-details-desc__right">
+              <div class="contractor-profile">
+                <div class="contractor-header">
+                  <img
+                    class="contractor-avatar"
+                    src="./assets/img/avatar.png"
+                    alt="Юрий Мишут"
+                  />
+                  <div class="contractor-info">
+                    <div class="contractor-name-row">
+                      <span class="contractor-name">Юрий Мишут</span>
+                      <img src="./assets/img/profi.png" alt="Профи" />
+                    </div>
+                    <button type="button" class="contractor-link">
+                      Перейти в профиль
+                    </button>
+                  </div>
+                </div>
+
+                <div class="stats-cards">
+                  <div class="stat-card">
+                    <div class="stat-card-value">24</div>
+                    <div class="stat-card-label">готовые работы</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-card-value">9</div>
+                    <div class="stat-card-label">подтверждено</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-card-value">12 000</div>
+                    <div class="stat-card-label">просмотров</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-card-value">86</div>
+                    <div class="stat-card-label">заявоĸ на работу</div>
+                  </div>
+                </div>
+
+                <div class="contact-card">
+                  <div class="contact-phone-row">
+                    <span class="contact-phone">+7 (911) 443-43-23</span>
+                    <button type="button" class="btn-call">Позвонить</button>
+                  </div>
+                  <div class="contact-sep"></div>
+                  <div class="contact-row">
+                    <img src="./assets/icons/sms.svg" alt="" />
+                    <span class="contact-row-text">Uiryimishut@gmail.com</span>
+                  </div>
+                  <div class="contact-sep"></div>
+                  <div class="contact-row">
+                    <img src="./assets/icons/global.svg" alt="" />
+                    <span class="contact-row-text">Mishutrabota.com</span>
+                  </div>
+                  <div class="contact-sep"></div>
+                  <div class="messenger-row">
+                    <span class="messenger-label">Написать в мессенджер:</span>
+                    <div class="messenger-list">
+                      <a href="#">
+                        <img src="./assets/icons/max.svg" alt="" />
+                      </a>
+                      <a href="#">
+                        <img src="./assets/icons/telegram.svg" alt="" />
+                      </a>
+                      <a href="#">
+                        <img src="./assets/icons/whatsapp.svg" alt="" />
+                      </a>
+                      <a href="#">
+                        <img src="./assets/icons/inst.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cta-card">
+                  <h3 class="cta-title">Хотите такой же бассейн?</h3>
+                  <p class="cta-sub">Юрий свяжется с вами лично</p>
+                  <form class="cta-form">
+                    <input
+                      type="tel"
+                      class="cta-input"
+                      placeholder="Телефон *"
+                    />
+                    <button type="submit" class="btn-cta-submit">
+                      Получить расчет
+                    </button>
+                  </form>
+                  <div class="cta-notices">
+                    <p class="cta-notice cta-notice-primary">
+                      Мы передадим вашу заявку и номер телефона исполнителю,<br />а
+                      вам — его контакт для связи
+                    </p>
+                    <p class="cta-notice cta-notice-muted">
+                      Нажимая на кнопку, вы даете согласие на обработку
+                      персональных данных
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CARD LIST SECTION -->
+        <div class="similar-works">
+          <div class="similar-works__head">
+            <h2>Похожие работы</h2>
+            <a href="#">Все работы</a>
+          </div>
+          <section class="cards-list cards-list--work">
+            <article class="card">
+              <div class="card-img-container">
+                <div class="card-slider">
+                  <img src="./assets/img/cards/1.jpg" />
+                  <img src="./assets/img/cards/2.jpg" />
+                  <img src="./assets/img/cards/3.jpg" />
+                </div>
+                <div class="card-badge-verified">
+                  <img src="./assets/icons/check.svg" alt="" />
+                  <span>Подтверждено заказчиком</span>
+                </div>
+                <div class="card-badge-photos">
+                  <span>+ 5 фото</span>
+                </div>
+                <button type="button" class="card-slide card-slide--back">
+                  <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+                </button>
+                <button type="button" class="card-slide card-slide--forward">
+                  <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+                </button>
+              </div>
+
+              <div class="card-content">
+                <h3 class="card-title">
+                  Готовый бассейн 8×4 с подогревом <br />и подсветкой • 45 дней
+                  • 3,2 млн ₽
+                </h3>
+
+                <div class="card-divider"></div>
+                <div class="card-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">24</div>
+                    <span class="stat-label">работ</span>
+                  </div>
+                  <span class="stat-dot">·</span>
+                  <div class="stat-item">
+                    <div class="stat-value">9</div>
+                    <span class="stat-label">подтверждено</span>
+                  </div>
+                  <span class="stat-dot">·</span>
+                  <button class="card-owner" type="button">
+                    <span class="card-owner-name">Владислав Скоробогатый</span>
+                    <svg
+                      width="13"
+                      height="7"
+                      viewBox="0 0 13 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-owner-details">
+                  <img
+                    class="card-owner-details__img"
+                    src="./assets/img/avatar.png"
+                    alt="аватар"
+                  />
+                  <div>
+                    <h5>
+                      Юрий Мишут
+                      <img src="./assets/img/profi.png" alt="профи" />
+                    </h5>
+                    <a href="#">Перейти в профиль</a>
+                    <p>
+                      Занимаюсь строительством и ремонтом под ключ. Работаю с
+                      проверенными материалами...
+                    </p>
+                  </div>
+                </div>
+                <div class="card-tags">
+                  <span class="card-tag primary">Строительство</span>
+                  <span class="card-tag secondary">Санкт-Петербург</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-img-container">
+                <div class="card-slider">
+                  <img src="./assets/img/cards/2.jpg" />
+                  <img src="./assets/img/cards/1.jpg" />
+                  <img src="./assets/img/cards/3.jpg" />
+                </div>
+                <div class="card-badge-verified">
+                  <img src="./assets/icons/check.svg" alt="" />
+                  <span>Подтверждено заказчиком</span>
+                </div>
+                <div class="card-badge-photos">
+                  <span>+ 5 фото</span>
+                </div>
+                <button type="button" class="card-slide card-slide--back">
+                  <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+                </button>
+                <button type="button" class="card-slide card-slide--forward">
+                  <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+                </button>
+              </div>
+
+              <div class="card-content">
+                <h3 class="card-title">
+                  Ремонт квартиры 45 м2 в стиле <br />
+                  арт-деко • 45 дней • 3,2 млн ₽
+                </h3>
+
+                <div class="card-divider"></div>
+                <div class="card-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">24</div>
+                    <span class="stat-label">работ</span>
+                  </div>
+                  <span class="stat-dot">·</span>
+                  <div class="stat-item">
+                    <div class="stat-value">9</div>
+                    <span class="stat-label">подтверждено</span>
+                  </div>
+                  <span class="stat-dot">·</span>
+                  <button class="card-owner" type="button">
+                    <span class="card-owner-name">Юрий Мишут</span>
+                    <svg
+                      width="13"
+                      height="7"
+                      viewBox="0 0 13 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-owner-details">
+                  <img
+                    class="card-owner-details__img"
+                    src="./assets/img/avatar.png"
+                    alt="аватар"
+                  />
+                  <div>
+                    <h5>
+                      Юрий Мишут
+                      <img
+                        class=""
+                        src="./assets/img/company.png"
+                        alt="профи"
+                      />
+                    </h5>
+                    <a href="#">Перейти в профиль</a>
+                    <p>
+                      Занимаюсь строительством и ремонтом под ключ. Работаю с
+                      проверенными материалами...
+                    </p>
+                  </div>
+                </div>
+                <div class="card-tags">
+                  <span class="card-tag primary">Строительство</span>
+                  <span class="card-tag secondary">Санкт-Петербург</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-img-container">
+                <div class="card-slider">
+                  <img src="./assets/img/cards/3.jpg" />
+                  <img src="./assets/img/cards/2.jpg" />
+                  <img src="./assets/img/cards/1.jpg" />
+                </div>
+                <div class="card-badge-verified">
+                  <img src="./assets/icons/check.svg" alt="" />
+                  <span>Подтверждено заказчиком</span>
+                </div>
+                <div class="card-badge-photos">
+                  <span>+ 5 фото</span>
+                </div>
+                <button type="button" class="card-slide card-slide--back">
+                  <img src="./assets/icons/arrow-slide.svg" alt="назад" />
+                </button>
+                <button type="button" class="card-slide card-slide--forward">
+                  <img src="./assets/icons/arrow-slide.svg" alt="вперед" />
+                </button>
+              </div>
+
+              <div class="card-content">
+                <h3 class="card-title">
+                  Ванная с плиткой и душевой зоной <br />
+                  12 м² • 45 дней • 3,2 млн ₽
+                </h3>
+
+                <div class="card-divider"></div>
+                <div class="card-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">24</div>
+                    <span class="stat-label">работ</span>
+                  </div>
+                  <span class="stat-dot">·</span>
+                  <div class="stat-item">
+                    <div class="stat-value">9</div>
+                    <span class="stat-label">подтверждено</span>
+                  </div>
+                  <span class="stat-dot">·</span>
+                  <button class="card-owner" type="button">
+                    <span class="card-owner-name">Юрий Мишут</span>
+                    <svg
+                      width="13"
+                      height="7"
+                      viewBox="0 0 13 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.48375 6.90433L13 0.977215L11.9299 -8.11411e-07L6.48294 4.95388L1.07331 0.0385556L7.026e-08 1.01245L6.48375 6.90433Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-owner-details">
+                  <img
+                    class="card-owner-details__img"
+                    src="./assets/img/avatar.png"
+                    alt="аватар"
+                  />
+                  <div>
+                    <h5>
+                      Юрий Мишут
+                      <img src="./assets/img/master.png" alt="профи" />
+                    </h5>
+                    <a href="#">Перейти в профиль</a>
+                    <p>
+                      Занимаюсь строительством и ремонтом под ключ. Работаю с
+                      проверенными материалами...
+                    </p>
+                  </div>
+                </div>
+                <div class="card-tags">
+                  <span class="card-tag primary">Строительство</span>
+                  <span class="card-tag secondary">Санкт-Петербург</span>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <button class="show-more-btn show-works-btn" type="button">
+            <span>Все работы</span>
+          </button>
+        </div>
+
+        <section class="banner-section">
+          <h2 class="banner-title">Хотите такой же бассейн? Оставьте заявку</h2>
+          <button class="banner-btn" type="button">Получить расчет</button>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-card">
+        <div class="site-footer-left">
+          <img
+            class="site-footer-logo"
+            alt="PROVEO"
+            src="./assets/img/white-logo.png"
+          />
+          <div class="site-footer-divider"></div>
+          <p class="site-footer-slogan">
+            Выбирайте по результату,<br />а не по словам
+          </p>
+        </div>
+        <nav class="site-footer-nav" aria-label="Нижняя навигация">
+          <ul>
+            <li>
+              <span class="site-footer-copyright"
+                >&copy; 2026 PROVEO. Все права защищены</span
+              >
+            </li>
+            <li>
+              <a class="site-footer-link" href="#"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li><a class="site-footer-link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="./assets/js/work.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
