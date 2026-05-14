@@ -307,15 +307,15 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   // Filters
-  const modal = document.querySelector('.modal-overlay')
-  document.querySelector('.modal-close')?.addEventListener('click', () => {
+  const modal = document.querySelector('#filter-modal')
+  modal.querySelector('.modal-close')?.addEventListener('click', () => {
     modal.classList.remove('active')
-    document.body.style.overflow = 'visible'
+    document.querySelector('html').style.overflow = 'visible'
   })
 
   document.querySelector('.filter-btn')?.addEventListener('click', () => {
     modal.classList.add('active')
-    document.body.style.overflow = 'hidden'
+    document.querySelector('html').style.overflow = 'hidden'
   })
 })
 

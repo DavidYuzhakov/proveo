@@ -523,6 +523,10 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-overlay.active {
@@ -531,16 +535,12 @@
 }
 
 .modal-content {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  right: 16px;
-  translate: 0 -50%;
-
+  position: relative;
   background-color: #fff;
   border-radius: 10px;
 
   padding: 30px 20px;
+  margin: 0 16px;
   height: auto;
 }
 
@@ -567,6 +567,13 @@
   gap: 6px;
 }
 
+.modal-alert {
+  color: #ff0000;
+  font-size: 12px;
+
+  display: none;
+}
+
 @media (min-width: 768px) {
   .filter-groups {
     display: flex;
@@ -578,6 +585,10 @@
 
   .modal-overlay {
     display: none;
+  }
+
+  .modal-content__title {
+    font-size: 26px;
   }
 }
 
@@ -1430,6 +1441,10 @@
 }
 .cta-input:focus {
   border-color: #67676770;
+}
+
+.cta-input.alert {
+  border-color: #ff0000;
 }
 
 .btn-cta-submit {

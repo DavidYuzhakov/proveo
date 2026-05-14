@@ -230,7 +230,7 @@
             </div>
           </div>
 
-          <div class="modal-overlay">
+          <div id="filter-modal" class="modal-overlay">
             <div class="modal-content">
               <h3 class="modal-content__title">Фильтр</h3>
               <div class="filter-groups">
@@ -758,8 +758,39 @@
 
         <section class="banner-section">
           <h2 class="banner-title">Понравились работы? Оставьте заявку</h2>
-          <button class="banner-btn" type="button">Оставить заявку</button>
+          <button class="banner-btn profile-btn" type="button">
+            Оставить заявку
+          </button>
         </section>
+        <div id="profile-modal" class="modal-overlay modal-profile">
+          <div class="modal-content">
+            <h3 class="modal-content__title">Оставить заявĸу</h3>
+            <p class="modal-profile__sub">
+              Исполнитель свяжется с вами напрямую
+            </p>
+            <form class="cta-form profile-form">
+              <input type="tel" class="cta-input" placeholder="Телефон *" />
+              <p class="modal-alert">Поле не заполнено</p>
+              <button type="submit" class="btn-cta-submit">
+                Отправить заявку
+              </button>
+            </form>
+            <div class="cta-notices">
+              <p class="cta-notice cta-notice-primary">
+                Мы передадим вашу заявку и номер телефона исполнителю, <br />
+                а вам — его контакт для связи
+              </p>
+              <p class="cta-notice cta-notice-muted">
+                Нажимая на кнопку, вы даете согласие на обработку персональных
+                данных
+              </p>
+            </div>
+
+            <button class="modal-close" type="button">
+              <img src="./assets/icons/close.svg" alt="закрыть" />
+            </button>
+          </div>
+        </div>
         <!-- CARD LIST SECTION -->
         <div class="similar-works similar-works--profile">
           <div class="similar-works__head">
@@ -1047,5 +1078,6 @@
       </div>
     </footer>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/profile.js"></script>
   </body>
 </html>

@@ -6,6 +6,38 @@
   margin-bottom: 0;
 }
 
+.modal-profile {
+  display: flex;
+}
+
+.modal-profile .modal-content {
+  background-color: #f1f5f9;
+  max-width: 440px;
+  width: 100%;
+}
+
+.modal-profile .modal-content__title {
+  margin-bottom: 8px;
+}
+
+.modal-profile__sub {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .modal-profile .modal-content {
+    padding: 30px;
+  }
+
+  .modal-profile .modal-content__title {
+    margin-bottom: 12px;
+  }
+
+  .modal-profile__sub {
+    font-size: 16px;
+  }
+}
+
 /* Profile */
 .profile {
   margin-bottom: 70px;
@@ -203,7 +235,7 @@
   .profile {
     flex-direction: row;
     gap: 45px;
-    margin-bottom: 100;
+    margin-bottom: 100px;
     margin-top: 50px;
   }
 

@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         document
           .querySelector('.search-not-found__message')
-          .classList.remove('active')
+          ?.classList.remove('active')
       }
     })
   }
