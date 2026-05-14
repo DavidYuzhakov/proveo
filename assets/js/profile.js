@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (modalState === 'success') {
       closeModal()
-      resetModal(input)
+      resetModal(input, button)
       modalState = 'default'
       return
     }
@@ -44,20 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
     modalState = 'success'
   })
 
-  const resetModal = (input) => {
+  const resetModal = (input, button) => {
     input.value = ''
     input.style.display = 'block'
     modal.querySelector('.cta-notices').style.display = 'block'
-
+    modal.querySelector('.modal-content__title').textContent = 'Оставить заявĸу'
     modal.querySelector('.modal-profile__sub').textContent =
       'Исполнитель свяжется с вами напрямую'
-    modal.querySelector('.modal-content__title').textContent = 'Оставить заявĸу'
+
+    button.textContent = 'Отправить заявку'
   }
 
   const showSuccessState = (input, button) => {
     input.style.display = 'none'
     modal.querySelector('.cta-notices').style.display = 'none'
-
     modal.querySelector('.modal-profile__sub').textContent =
       'Исполнитель свяжется с вами в ближайшее время'
     modal.querySelector('.modal-content__title').textContent =
