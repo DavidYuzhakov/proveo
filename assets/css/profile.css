@@ -95,6 +95,23 @@
   width: 100%;
 }
 
+.profile__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.profile__status img {
+  width: 30px;
+  height: 30px;
+}
+
+.profile__status + .profile__tags {
+  margin-top: 0;
+}
+
 .profile__tags {
   display: flex;
   flex-wrap: wrap;
@@ -132,6 +149,73 @@
 .profile-divider {
   height: 1px;
   background-color: rgba(103, 103, 103, 0.2);
+}
+
+.profile__verify {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+
+.profile-verify__head {
+  background-color: rgba(237, 0, 0, 0.08);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  padding: 24px 26px 20px 20px;
+
+  display: flex;
+  gap: 16px;
+}
+
+.profile-verify__head img {
+  width: 36px;
+  height: 36px;
+}
+
+.profile-verify__head h4 {
+  font-family: 'Golos Text';
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.profile-verify__head p {
+  font-size: 14px;
+}
+
+.profile-verify__content {
+  padding: 26px 26px 28px 72px;
+}
+
+.profile-verify__item {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+
+.profile-verify__item img {
+  width: 20px;
+  height: 20px;
+}
+
+.profile-verify__item p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-verify__item---last {
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.profile-verify__btn {
+  padding: 0 50px;
+}
+
+.profile-verify__sub {
+  font-size: 12px;
+  margin-top: 12px;
 }
 
 .profile-contact {
@@ -211,6 +295,16 @@
     order: 0;
   }
 
+  .profile__status {
+    gap: 6px;
+    margin: 11px 0;
+  }
+
+  .profile__status img {
+    width: 36px;
+    height: 36px;
+  }
+
   .profile__tags {
     margin-top: 24px;
     gap: 12px;
@@ -219,6 +313,48 @@
   .profile__tag {
     padding: 8px 12px;
     font-size: 16px;
+  }
+
+  .profile-verify__head {
+    padding: 24px 30px 20px 30px;
+    gap: 26px;
+  }
+
+  .profile-verify__head img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile-verify__head h4 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .profile-verify__head p {
+    font-size: 16px;
+  }
+
+  .profile-verify__content {
+    padding: 30px 30px 26px 106px;
+  }
+
+  .profile-verify__item--last {
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 30px;
+  }
+
+  .profile-verify__item p {
+    font-size: 16px;
+  }
+
+  .profile-verify__btn {
+    padding: 0 57px;
+  }
+
+  .profile-verify__sub {
+    margin-top: 14px;
+    font-size: 14px;
   }
 
   .profile__desc p {

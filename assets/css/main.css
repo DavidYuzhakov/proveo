@@ -1463,6 +1463,10 @@
   opacity: 0.9;
 }
 
+.btn-cta-submit:disabled {
+  background-color: #c5c5c5;
+}
+
 .cta-notices {
   display: flex;
   flex-direction: column;
