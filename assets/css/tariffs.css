@@ -1,0 +1,436 @@
+.main-tariffs__title {
+  font-family: 'Golos Text';
+  font-weight: 700;
+  font-size: 28px;
+
+  margin-top: 30px;
+  margin-bottom: 14px;
+}
+
+.main-tariffs__sub {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.tariffs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.tariffs__left {
+  max-width: 770px;
+  width: 100%;
+}
+
+.tariffs__verification {
+  background-color: rgba(41, 155, 26, 0.1);
+  border-radius: 10px;
+  padding: 24px 20px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 18px;
+}
+
+.tariffs__verification img {
+  width: 36px;
+  height: 36px;
+}
+
+.tariffs__verification h4 {
+  font-family: 'Golos Text';
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.tariffs__steps {
+  padding: 32px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tariffs__divider {
+  height: 1px;
+  background-color: rgba(103, 103, 103, 0.2);
+  margin: 30px 0;
+}
+
+.tariffs__request h4 {
+  font-family: 'Golos Text';
+  font-weight: 600;
+  font-size: 20px;
+
+  margin-bottom: 22px;
+}
+
+.tariffs-request__block {
+  background-color: rgba(30, 110, 231, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  padding-right: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tariffs-request__block--first {
+  margin-bottom: 12px;
+}
+
+.tariffs__step {
+  display: flex;
+  align-items: center;
+}
+
+.tariffs-step__num {
+  width: 26px;
+  height: 26px;
+
+  background-color: #164c9e;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+
+  margin-right: 16px;
+}
+
+.tariffs-step__label {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Golos Text';
+}
+
+.tariffs-step__info {
+  width: 22px;
+  height: 22px;
+  margin-left: 9px;
+
+  cursor: pointer;
+}
+
+.tariffs__tags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tariffs__tag {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 12px 13px;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+.tariffs__tag.active {
+  color: #fff;
+  background-color: #1e6ee7;
+  font-weight: 500;
+}
+
+.tariffs-request__text {
+  margin-top: 26px;
+  margin-bottom: -10px;
+
+  font-family: 'Golos Text';
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tariffs-request__text p {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 13.5px;
+}
+
+.tariffs-request__text p span {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.tariffs-deadline__items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.tariffs-deadline__item {
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+.tariffs-item__label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.tariffs-item__label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.tariffs-deadline__item .tariffs-item__label {
+  width: 126px;
+}
+
+.tariffs-item__label .checkmark {
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(103, 103, 103, 0.2);
+  border-radius: 5px;
+  position: relative;
+
+  transition: all 0.2s ease;
+}
+
+.tariffs-item__label:hover input ~ .checkmark {
+  border-color: #1e6ee7;
+}
+
+.tariffs-item__label input:checked ~ .checkmark {
+  background-color: #1e6ee7;
+  border-color: #1e6ee7;
+}
+
+.tariffs-item__label .checkmark::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  width: 5px;
+  height: 10px;
+
+  border: solid white;
+  border-width: 0 2px 2px 0;
+
+  translate: -50% -60%;
+  transform: rotate(45deg);
+}
+
+.tariffs-item__label input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.tariffs-item__divider {
+  background-color: rgba(103, 103, 103, 0.2);
+  width: 1px;
+  height: 30px;
+  margin: 0 16px;
+}
+
+.tariffs__price {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 8px;
+}
+
+.tariffs__new-price {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.tariffs__new-price span {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.tariffs__old-price {
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+
+.tariffs__discount {
+  width: 41px;
+  padding: 4px 0;
+
+  font-weight: 700;
+  font-size: 13.5px;
+  line-height: 135%;
+  color: #fff;
+
+  border-radius: 5px;
+  background-color: #035096;
+  text-align: center;
+}
+
+.tariffs-options__items {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.tariffs-option__label {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tariffs-option__label .price {
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.tariffs-option__label .deadline {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .main-tariffs__title {
+    font-size: 36px;
+    margin-top: 53px;
+    margin-bottom: 16px;
+  }
+
+  .main-tariffs__sub {
+    font-size: 19px;
+  }
+
+  .tariffs {
+    padding-top: 50px;
+    flex-direction: row;
+    gap: 44px;
+  }
+
+  .tariffs__verification {
+    padding: 28px 40px;
+    gap: 26px;
+
+    margin-bottom: 26px;
+  }
+
+  .tariffs__verification img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tariffs__verification h4 {
+    font-size: 26px;
+  }
+
+  .tariffs__divider {
+    margin: 40px 0;
+  }
+
+  .tariffs__request h4 {
+    margin-bottom: 30px;
+    font-size: 26px;
+  }
+
+  .tariffs-request__block {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .tariffs__tags {
+    padding-left: 42px;
+  }
+
+  .tariffs-request__text {
+    gap: 9px;
+    margin-bottom: -20px;
+    margin-top: 18px;
+  }
+
+  .tariffs-request__text p {
+    font-size: 16px;
+  }
+
+  .tariffs-request__text p span {
+    font-size: 20px;
+  }
+
+  .tariffs-deadline__items {
+    gap: 10px;
+    margin-top: 10px;
+    padding-left: 42px;
+  }
+
+  .tariffs-item__label {
+    gap: 20px;
+    font-size: 18px;
+  }
+
+  .tariffs-deadline__item .tariffs-item__label {
+    width: 150px;
+  }
+
+  .tariffs__price {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 9px;
+  }
+
+  .tariffs__new-price {
+    font-size: 20px;
+  }
+
+  .tariffs__new-price span {
+    font-size: 15px;
+  }
+
+  .tariffs__discount {
+    font-size: 18px;
+    width: 70px;
+  }
+
+  .tariffs-options__items {
+    margin-top: 10px;
+    padding-left: 42px;
+  }
+
+  .tariffs-option__label {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .tariffs-option__label .price {
+    font-size: 20px;
+  }
+
+  .tariffs-option__label .deadline {
+    font-size: 15px;
+  }
+}

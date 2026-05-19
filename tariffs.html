@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>PROVEO - Выбирайте по результату, а не по словам</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:300,regular,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Golos+Text:regular,500,600,700"
+      rel="stylesheet"
+    />
+    <link href="assets/css/reset.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/tariffs.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-left">
+            <img class="header-logo" alt="PROVEO" src="./assets/img/logo.png" />
+            <div class="header-divider"></div>
+            <p class="header-slogan">
+              Выбирайте по результату,<br />а не по словам
+            </p>
+          </div>
+          <nav class="header-nav" aria-label="Основная навигация">
+            <ul>
+              <li><button type="button">Работы</button></li>
+              <li><button type="button">Компании</button></li>
+              <li><button type="button">Категории</button></li>
+              <li><button type="button">Города</button></li>
+            </ul>
+          </nav>
+          <div class="header-right">
+            <button class="header-fav-btn" type="button" aria-label="Избранное">
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9998 23.4542C12.664 23.4542 12.339 23.4108 12.0682 23.3133C7.92984 21.8942 1.354 16.8567 1.354 9.41417C1.354 5.6225 4.41984 2.54584 8.18984 2.54584C10.0207 2.54584 11.7323 3.26084 12.9998 4.53917C14.2673 3.26084 15.979 2.54584 17.8098 2.54584C21.5798 2.54584 24.6457 5.63334 24.6457 9.41417C24.6457 16.8675 18.0698 21.8942 13.9315 23.3133C13.6607 23.4108 13.3357 23.4542 12.9998 23.4542ZM8.18984 4.17084C5.319 4.17084 2.979 6.52167 2.979 9.41417C2.979 16.8133 10.0965 20.93 12.599 21.7858C12.794 21.8508 13.2165 21.8508 13.4115 21.7858C15.9032 20.93 23.0315 16.8242 23.0315 9.41417C23.0315 6.52167 20.6915 4.17084 17.8207 4.17084C16.174 4.17084 14.6465 4.94 13.6607 6.2725C13.3573 6.68417 12.664 6.68417 12.3607 6.2725C11.3532 4.92917 9.8365 4.17084 8.18984 4.17084Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+            <button class="header-login-btn" type="button">Войти</button>
+            <button class="header-menu">
+              <span></span>
+            </button>
+            <ul class="header-menu-nav">
+              <li>Работы</li>
+              <li>Компании</li>
+              <li>Категории</li>
+              <li>Города</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="container">
+        <h2 class="main-tariffs__title">
+          Покажите свои работы — клиенты придут сами
+        </h2>
+        <p class="main-tariffs__sub">
+          Без отзывов и накруток. Только реальные работы и заявки
+        </p>
+
+        <section class="tariffs">
+          <div class="tariffs__left">
+            <div class="tariffs__verification">
+              <img src="./assets/icons/check-green.svg" alt="галока" />
+              <h4>Верефикация пройдена</h4>
+            </div>
+            <div class="tariffs__steps">
+              <div class="tariffs__request">
+                <h4>Шаг 2. Выберите где вы хотите получать заявки?</h4>
+                <div
+                  class="tariffs-request__block tariffs-request__block--first"
+                >
+                  <div class="tariffs__step">
+                    <div class="tariffs-step__num">01</div>
+                    <div class="tariffs-step__label">Выберите город</div>
+                    <img
+                      src="./assets/icons/info.svg"
+                      class="tariffs-step__info"
+                      alt="info"
+                      title="Можете выбрать несколько городов"
+                    />
+                  </div>
+                  <div class="tariffs__tags">
+                    <div class="tariffs__tag active">СПб</div>
+                    <div class="tariffs__tag">Москва</div>
+                    <div class="tariffs__tag">Казань</div>
+                    <div class="tariffs__tag">Новосибирск</div>
+                    <div class="tariffs__tag">Екатеринбург</div>
+                    <div class="tariffs__tag">+ Еще</div>
+                  </div>
+                </div>
+                <div class="tariffs-request__block">
+                  <div class="tariffs__step">
+                    <div class="tariffs-step__num">02</div>
+                    <div class="tariffs-step__label">Выберите категорию</div>
+                    <img
+                      src="./assets/icons/info.svg"
+                      class="tariffs-step__info"
+                      alt="info"
+                      title="Можете выбрать несколько категорий"
+                    />
+                  </div>
+                  <div class="tariffs__tags">
+                    <div class="tariffs__tag active">IT-консалтинг</div>
+                    <div class="tariffs__tag">Строительство</div>
+                    <div class="tariffs__tag">Бухгалтерские услуги</div>
+                    <div class="tariffs__tag">Маркетинг</div>
+                    <div class="tariffs__tag">Юридические услуги</div>
+                    <div class="tariffs__tag">+ Еще</div>
+                  </div>
+                </div>
+                <div class="tariffs-request__text">
+                  Стоимость рассчитывается:
+                  <p>
+                    <span>1190₽</span>
+                    × (кол-во категорий × кол-во городов)
+                  </p>
+                </div>
+              </div>
+              <div class="tariffs__divider"></div>
+              <div class="tariffs__deadline">
+                <div class="tariffs__step">
+                  <div class="tariffs-step__num">03</div>
+                  <div class="tariffs-step__label">Выберите срок</div>
+                </div>
+                <div class="tariffs-deadline__items">
+                  <div class="tariffs-deadline__item">
+                    <label class="tariffs-item__label">
+                      <input type="radio" name="option" checked value="1" />
+                      <span class="checkmark"></span>
+                      1 месяц
+                    </label>
+                    <div class="tariffs-item__divider"></div>
+                    <div class="tariffs__price">
+                      <div class="tariffs__new-price">1190 <span>₽</span></div>
+                    </div>
+                  </div>
+                  <div class="tariffs-deadline__item">
+                    <label class="tariffs-item__label">
+                      <input type="radio" name="option" checked value="3" />
+                      <span class="checkmark"></span>
+                      3 месяца
+                    </label>
+                    <div class="tariffs-item__divider"></div>
+                    <div class="tariffs__price">
+                      <div class="tariffs__new-price">4000 <span>₽</span></div>
+                      <span class="tariffs__old-price">5160 ₽</span>
+                    </div>
+                    <div class="tariffs__discount">-5%</div>
+                  </div>
+                  <div class="tariffs-deadline__item">
+                    <label class="tariffs-item__label">
+                      <input type="radio" name="option" checked value="6" />
+                      <span class="checkmark"></span>
+                      6 месяцев
+                    </label>
+                    <div class="tariffs-item__divider"></div>
+                    <div class="tariffs__price">
+                      <div class="tariffs__new-price">8000 <span>₽</span></div>
+                      <span class="tariffs__old-price">11430 ₽</span>
+                    </div>
+                    <div class="tariffs__discount">-10%</div>
+                  </div>
+                  <div class="tariffs-deadline__item">
+                    <label class="tariffs-item__label">
+                      <input type="radio" name="option" checked value="12" />
+                      <span class="checkmark"></span>
+                      12 месяцев
+                    </label>
+                    <div class="tariffs-item__divider"></div>
+                    <div class="tariffs__price">
+                      <div class="tariffs__new-price">12000 <span>₽</span></div>
+                      <span class="tariffs__old-price">15160 ₽</span>
+                    </div>
+                    <div class="tariffs__discount">-15%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tariffs__divider"></div>
+              <div class="tariffs__options">
+                <div class="tariffs__step">
+                  <div class="tariffs-step__num">04</div>
+                  <div class="tariffs-step__label">Дополнительные опции</div>
+                </div>
+
+                <div class="tariffs-options__items">
+                  <div class="tariffs-options__item">
+                    <label class="tariffs-item__label tariffs-option__label">
+                      <input type="checkbox" name="option" />
+                      <span class="checkmark"></span>
+                      <div>
+                        Размещение на 58 экранах города —
+                        <span class="price">39 900</span
+                        ><span class="deadline">₽ / мес</span>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="tariffs-options__item">
+                    <label class="tariffs-item__label tariffs-option__label">
+                      <input type="checkbox" name="option" />
+                      <span class="checkmark"></span>
+                      <div>
+                        Размещение в журналах города —
+                        <span class="price">19 900 </span>
+                        <span class="deadline"> ₽ / мес</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="tariffs__divider"></div>
+              <div class="tariffs__advantage"></div>
+            </div>
+          </div>
+          <div class="tariffs__right"></div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-card">
+        <div class="site-footer-left">
+          <img
+            class="site-footer-logo"
+            alt="PROVEO"
+            src="./assets/img/white-logo.png"
+          />
+          <div class="site-footer-divider"></div>
+          <p class="site-footer-slogan">
+            Выбирайте по результату,<br />а не по словам
+          </p>
+        </div>
+        <nav class="site-footer-nav" aria-label="Нижняя навигация">
+          <ul>
+            <li>
+              <span class="site-footer-copyright"
+                >&copy; 2026 PROVEO. Все права защищены</span
+              >
+            </li>
+            <li>
+              <a class="site-footer-link" href="#"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li><a class="site-footer-link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

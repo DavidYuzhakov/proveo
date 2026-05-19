@@ -1,32 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
   const mainImage = document.querySelector('.work-slider-main__image')
-  const thumbs = document.querySelectorAll('.work-slider-thumb')
+  const thumbs = [...document.querySelectorAll('.work-slider-thumb')]
   const prevBtn = document.querySelector('.work-slide-prev')
   const nextBtn = document.querySelector('.work-slide-next')
 
-  let currentIndex = 0
+  let currentIndex = thumbs.findIndex((thumb) =>
+    thumb.classList.contains('active'),
+  )
 
-  // Массив картинок
-  const images = [
-    './assets/img/work/1.png',
-    './assets/img/work/2.png',
-    './assets/img/work/3.png',
-    './assets/img/work/4.png',
-  ]
+  if (currentIndex === -1) {
+    currentIndex = 0
+  }
 
   function showSlide(index) {
     currentIndex = index
 
-    console.log(mainImage)
-    mainImage.src = images[currentIndex]
-    console.log(mainImage)
+    const currentThumb = thumbs[currentIndex]
+    const newImageUrl = currentThumb.dataset.mainUrl
+    mainImage.src = newImageUrl
 
     thumbs.forEach((thumb) => {
       thumb.classList.remove('active')
     })
 
-    // Добавляем active текущему
-    thumbs[currentIndex].classList.add('active')
+    currentThumb.classList.add('active')
   }
 
   thumbs.forEach((thumb, index) => {
@@ -36,23 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   nextBtn.addEventListener('click', () => {
-    currentIndex++
-
-    // Если последний — идем в начало
-    if (currentIndex >= images.length) {
-      currentIndex = 0
-    }
-
-    showSlide(currentIndex)
+    const nextIndex = currentIndex + 1 >= thumbs.length ? 0 : currentIndex + 1
+    showSlide(nextIndex)
   })
 
   prevBtn.addEventListener('click', () => {
-    currentIndex--
+    const prevIndex =
+      currentIndex - 1 < 0 ? thumbs.length - 1 : currentIndex - 1
 
-    if (currentIndex < 0) {
-      currentIndex = images.length - 1
-    }
-
-    showSlide(currentIndex)
+    showSlide(prevIndex)
   })
 })

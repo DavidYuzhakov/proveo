@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Filters
   const modal = document.querySelector('#filter-modal')
-  modal.querySelector('.modal-close')?.addEventListener('click', () => {
+  modal?.querySelector('.modal-close')?.addEventListener('click', () => {
     modal.classList.remove('active')
     document.querySelector('html').style.overflow = 'visible'
   })
